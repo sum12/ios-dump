@@ -90,6 +90,7 @@
 - (void) pushVariable:(NSString *)varName
 {
     [self.programStack addObject:[varName copy]];
+    NSLog([[varName copy ]stringByAppendingString:@" <--pushed valriable"]);
 }
 
 - (void)pushOperation:(NSString *)operation
@@ -167,7 +168,7 @@
     }
     int count = [program count];
     stack= [program mutableCopy];
-    for (;count!=-1;count--) {
+    for (count--;count!=-1;count--) {
         id element = [stack objectAtIndex:count];
         if([element isKindOfClass:[NSString class]]){
             NSString * value = element;
@@ -195,7 +196,7 @@
         return nil;
     NSMutableSet * variableSet = nil;
     int count = [stack count];
-    for (; count!=-1; count--) {
+    for (count--; count!=-1; count--) {
         id element = [stack objectAtIndex:count];
         if ([element isKindOfClass:[NSString class]]) {
             NSString * value = element;

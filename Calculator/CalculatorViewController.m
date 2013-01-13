@@ -86,13 +86,33 @@
     if(!self.userIsInTheMiddleOfTypingANumber)
     {
         [self.brain pushVariable:[sender currentTitle]];
-        self.history.text = [self.brain getDescription];
     }
 }
 
 - (IBAction)evaluate {
     self.history.text = [self.brain getDescription];
-    self.display.text = [NSString stringWithFormat:@"%g",[self.brain evaluate]];
+    NSSet * variableSet = [CalculatorBrain variablesUsedInPorgram:self.brain.program];
+    NSMutableDictionary * vardict;
+    if ([variableSet count]) {
+        for (NSString * var in variableSet) {
+            if ([var isEqualToString:@"x"]) {
+                if(! vardict) vardict = [[NSMutableDictionary alloc] init];
+                [vardict setObject:[NSNumber numberWithInt:10] forKey:var];
+            }
+            else if ([var isEqualToString:@"y"]) {
+                if(! vardict) vardict = [[NSMutableDictionary alloc] init];
+                [vardict setObject:[NSNumber numberWithInt:20] forKey:var];
+            }
+            else if ([var isEqualToString:@"z"]) {
+                if(! vardict) vardict = [[NSMutableDictionary alloc] init];
+                [vardict setObject:[NSNumber numberWithInt:30] forKey:var];
+            }
+        }
+        NSLog(@"reached here");
+        self.display.text = [NSString stringWithFormat:@"%g",[CalculatorBrain runProgram:self.brain.program usingVaribaleValues:vardict]];
+    }
+    else
+        self.display.text = [NSString stringWithFormat:@"%g",[CalculatorBrain runProgram:self.brain.program]];
 }
 
 - (void)viewDidUnload {
