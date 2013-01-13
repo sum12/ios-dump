@@ -1,5 +1,5 @@
 //
-//  PsychologistViewController.h
+//  RotatableViewController.h
 //  Psychologist
 //
 //  Created by Sumit Jamgade on 8/22/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PsychologistViewController : UIViewController 
+@interface RotatableViewController : UIViewController <UISplitViewControllerDelegate>
 
 @end

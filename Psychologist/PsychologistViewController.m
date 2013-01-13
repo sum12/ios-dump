@@ -7,54 +7,70 @@
 //
 
 #import "PsychologistViewController.h"
+#import "HappinessViewController.h"
+
+@interface PsychologistViewController() 
+@property (nonatomic) int diagnosis;
+@end
 
 @implementation PsychologistViewController
 
-- (void)didReceiveMemoryWarning
+@synthesize diagnosis =_diagnosis;
+
+
+- (HappinessViewController *)splitViewHappinessViewController
 {
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+    id hvc = [self.splitViewController.viewControllers lastObject];
+    if (![hvc isKindOfClass:[HappinessViewController class]]) {
+        hvc=nil;
+        NSLog(@"hvc is nil");
+    }
+    return hvc;
 }
 
-#pragma mark - View lifecycle
 
-- (void)viewDidLoad
+-(void)setAndShowDiagnosis:(int)diagnosis
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.diagnosis = diagnosis;
+    if ([self splitViewHappinessViewController]) {
+        [self splitViewHappinessViewController].happiness =diagnosis;
+        NSLog(@"set the diagmosis %d",diagnosis);
+    }
+    else{
+    [self performSegueWithIdentifier:@"ShowDiagnosis" sender:self];
+    }
+}
+ 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"ShowDiagnosis"]) {
+        [segue.destinationViewController setHappiness:self.diagnosis];
+    } else if ([segue.identifier isEqualToString:@"Celebrity"]) {
+        [segue.destinationViewController setHappiness:100];
+    } else if ([segue.identifier isEqualToString:@"Problem"]) {
+        [segue.destinationViewController setHappiness:20];
+    } else if ([segue.identifier isEqualToString:@"TvKook"]) {
+        [segue.destinationViewController setHappiness:65];
+    } 
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+- (IBAction)dragons {
+    [self setAndShowDiagnosis:20];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+- (IBAction)NoDreams {
+    [self setAndShowDiagnosis:50];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
+
+- (IBAction)apple {
+    [self setAndShowDiagnosis:100];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return YES;
 }
 
 @end
