@@ -16,6 +16,7 @@
 		EF08A8471619676B002EB001 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF08A8451619676B002EB001 /* MainStoryboard_iPhone.storyboard */; };
 		EF08A84A1619676B002EB001 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF08A8481619676B002EB001 /* MainStoryboard_iPad.storyboard */; };
 		EF08A84D1619676B002EB001 /* CalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08A84C1619676B002EB001 /* CalculatorViewController.m */; };
+		EF08A85516196810002EB001 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = EF08A85416196810002EB001 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +24,18 @@
 		EF08A8331619676B002EB001 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EF08A8351619676B002EB001 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EF08A8371619676B002EB001 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EF08A83B1619676B002EB001 /* Calculator-Info.plist */ = {isa = PBXFileReference; path = "Calculator-Info.plist"; sourceTree = "<group>"; };
+		EF08A83B1619676B002EB001 /* Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calculator-Info.plist"; sourceTree = "<group>"; };
 		EF08A83D1619676B002EB001 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EF08A83F1619676B002EB001 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EF08A8411619676B002EB001 /* Calculator-Prefix.pch */ = {isa = PBXFileReference; path = "Calculator-Prefix.pch"; sourceTree = "<group>"; };
-		EF08A8421619676B002EB001 /* CalculatorAppDelegate.h */ = {isa = PBXFileReference; path = CalculatorAppDelegate.h; sourceTree = "<group>"; };
+		EF08A8411619676B002EB001 /* Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		EF08A8421619676B002EB001 /* CalculatorAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorAppDelegate.h; sourceTree = "<group>"; };
 		EF08A8431619676B002EB001 /* CalculatorAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorAppDelegate.m; sourceTree = "<group>"; };
 		EF08A8461619676B002EB001 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		EF08A8491619676B002EB001 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		EF08A84B1619676B002EB001 /* CalculatorViewController.h */ = {isa = PBXFileReference; path = CalculatorViewController.h; sourceTree = "<group>"; };
+		EF08A84B1619676B002EB001 /* CalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorViewController.h; sourceTree = "<group>"; };
 		EF08A84C1619676B002EB001 /* CalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorViewController.m; sourceTree = "<group>"; };
+		EF08A85316196810002EB001 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		EF08A85416196810002EB001 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				EF08A8431619676B002EB001 /* CalculatorAppDelegate.m */,
 				EF08A8451619676B002EB001 /* MainStoryboard_iPhone.storyboard */,
 				EF08A8481619676B002EB001 /* MainStoryboard_iPad.storyboard */,
+				EF08A85316196810002EB001 /* CalculatorBrain.h */,
+				EF08A85416196810002EB001 /* CalculatorBrain.m */,
 				EF08A84B1619676B002EB001 /* CalculatorViewController.h */,
 				EF08A84C1619676B002EB001 /* CalculatorViewController.m */,
 				EF08A83A1619676B002EB001 /* Supporting Files */,
@@ -167,6 +172,7 @@
 				EF08A8401619676B002EB001 /* main.m in Sources */,
 				EF08A8441619676B002EB001 /* CalculatorAppDelegate.m in Sources */,
 				EF08A84D1619676B002EB001 /* CalculatorViewController.m in Sources */,
+				EF08A85516196810002EB001 /* CalculatorBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
