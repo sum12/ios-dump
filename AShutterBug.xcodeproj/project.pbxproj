@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EFC7702116B5275C001178EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7702016B5275C001178EE /* UIKit.framework */; };
+		EFC7702316B5275C001178EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7702216B5275C001178EE /* Foundation.framework */; };
+		EFC7702516B5275C001178EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7702416B5275C001178EE /* CoreGraphics.framework */; };
+		EFC7702B16B5275C001178EE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFC7702916B5275C001178EE /* InfoPlist.strings */; };
+		EFC7702D16B5275C001178EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7702C16B5275C001178EE /* main.m */; };
+		EFC7703116B5275C001178EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7703016B5275C001178EE /* AppDelegate.m */; };
+		EFC7703416B5275C001178EE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC7703216B5275C001178EE /* MainStoryboard_iPhone.storyboard */; };
+		EFC7703716B5275C001178EE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC7703516B5275C001178EE /* MainStoryboard_iPad.storyboard */; };
+		EFC7703A16B5275C001178EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7703916B5275C001178EE /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EFC7701C16B5275C001178EE /* AShutterBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AShutterBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFC7702016B5275C001178EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EFC7702216B5275C001178EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EFC7702416B5275C001178EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EFC7702816B5275C001178EE /* AShutterBug-Info.plist */ = {isa = PBXFileReference; path = "AShutterBug-Info.plist"; sourceTree = "<group>"; };
+		EFC7702A16B5275C001178EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EFC7702C16B5275C001178EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFC7702E16B5275C001178EE /* AShutterBug-Prefix.pch */ = {isa = PBXFileReference; path = "AShutterBug-Prefix.pch"; sourceTree = "<group>"; };
+		EFC7702F16B5275C001178EE /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFC7703016B5275C001178EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFC7703316B5275C001178EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		EFC7703616B5275C001178EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		EFC7703816B5275C001178EE /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		EFC7703916B5275C001178EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFC7701916B5275C001178EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC7702116B5275C001178EE /* UIKit.framework in Frameworks */,
+				EFC7702316B5275C001178EE /* Foundation.framework in Frameworks */,
+				EFC7702516B5275C001178EE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFC7701116B5275C001178EE = {
+			isa = PBXGroup;
+			children = (
+				EFC7702616B5275C001178EE /* AShutterBug */,
+				EFC7701F16B5275C001178EE /* Frameworks */,
+				EFC7701D16B5275C001178EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFC7701D16B5275C001178EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFC7701C16B5275C001178EE /* AShutterBug.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFC7701F16B5275C001178EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFC7702016B5275C001178EE /* UIKit.framework */,
+				EFC7702216B5275C001178EE /* Foundation.framework */,
+				EFC7702416B5275C001178EE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EFC7702616B5275C001178EE /* AShutterBug */ = {
+			isa = PBXGroup;
+			children = (
+				EFC7702F16B5275C001178EE /* AppDelegate.h */,
+				EFC7703016B5275C001178EE /* AppDelegate.m */,
+				EFC7703216B5275C001178EE /* MainStoryboard_iPhone.storyboard */,
+				EFC7703516B5275C001178EE /* MainStoryboard_iPad.storyboard */,
+				EFC7703816B5275C001178EE /* ViewController.h */,
+				EFC7703916B5275C001178EE /* ViewController.m */,
+				EFC7702716B5275C001178EE /* Supporting Files */,
+			);
+			path = AShutterBug;
+			sourceTree = "<group>";
+		};
+		EFC7702716B5275C001178EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EFC7702816B5275C001178EE /* AShutterBug-Info.plist */,
+				EFC7702916B5275C001178EE /* InfoPlist.strings */,
+				EFC7702C16B5275C001178EE /* main.m */,
+				EFC7702E16B5275C001178EE /* AShutterBug-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFC7701B16B5275C001178EE /* AShutterBug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFC7703D16B5275C001178EE /* Build configuration list for PBXNativeTarget "AShutterBug" */;
+			buildPhases = (
+				EFC7701816B5275C001178EE /* Sources */,
+				EFC7701916B5275C001178EE /* Frameworks */,
+				EFC7701A16B5275C001178EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AShutterBug;
+			productName = AShutterBug;
+			productReference = EFC7701C16B5275C001178EE /* AShutterBug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFC7701316B5275C001178EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = EFC7701616B5275C001178EE /* Build configuration list for PBXProject "AShutterBug" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EFC7701116B5275C001178EE;
+			productRefGroup = EFC7701D16B5275C001178EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFC7701B16B5275C001178EE /* AShutterBug */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFC7701A16B5275C001178EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC7702B16B5275C001178EE /* InfoPlist.strings in Resources */,
+				EFC7703416B5275C001178EE /* MainStoryboard_iPhone.storyboard in Resources */,
+				EFC7703716B5275C001178EE /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFC7701816B5275C001178EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC7702D16B5275C001178EE /* main.m in Sources */,
+				EFC7703116B5275C001178EE /* AppDelegate.m in Sources */,
+				EFC7703A16B5275C001178EE /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EFC7702916B5275C001178EE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC7702A16B5275C001178EE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EFC7703216B5275C001178EE /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC7703316B5275C001178EE /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		EFC7703516B5275C001178EE /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFC7703616B5275C001178EE /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFC7703B16B5275C001178EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFC7703C16B5275C001178EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFC7703E16B5275C001178EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AShutterBug/AShutterBug-Prefix.pch";
+				INFOPLIST_FILE = "AShutterBug/AShutterBug-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EFC7703F16B5275C001178EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AShutterBug/AShutterBug-Prefix.pch";
+				INFOPLIST_FILE = "AShutterBug/AShutterBug-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFC7701616B5275C001178EE /* Build configuration list for PBXProject "AShutterBug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC7703B16B5275C001178EE /* Debug */,
+				EFC7703C16B5275C001178EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFC7703D16B5275C001178EE /* Build configuration list for PBXNativeTarget "AShutterBug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC7703E16B5275C001178EE /* Debug */,
+				EFC7703F16B5275C001178EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFC7701316B5275C001178EE /* Project object */;
+}
