@@ -9,11 +9,20 @@
 #import "FlickerFetcherTableViewController.h"
 #import "FlickrFetcher.h"
 
+@interface FlickerFetcherTableViewController()
+
+@property (nonatomic) int selectedIndex;
+@property (nonatomic,strong) NSDictionary * dict;
+
+@end
+
+
+
 @implementation FlickerFetcherTableViewController
 
-
-
 @synthesize data = _data;
+@synthesize selectedIndex = _selectedIndex;
+@synthesize dict = _dict;
 
 
 - (void) setPhotos:(NSMutableArray *)data
@@ -29,15 +38,20 @@
     [spinner startAnimating];
     NSString * titleOfTab = [self.navigationItem.title copy];
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:spinner];
-    dispatch_queue_t downloadQueue = dispatch_queue_create("FlicrkrDownloader", NULL);
+    dispatch_queue_t downloadQueue = dispatch_queue_create("FlickrDownloader", NULL);
     dispatch_async(downloadQueue, ^{
         
         if ([titleOfTab isEqualToString:@"Top Places"]) {
             data = [FlickrFetcher topPlaces];
         }
-        else{
+        else if ([titleOfTab isEqualToString:@"Top Photos"]){
             data = [FlickrFetcher recentGeoreferencedPhotos];
-        }dispatch_async(dispatch_get_main_queue(), ^{
+        }
+        else{
+            data = [FlickrFetcher photosInPlace:self.dict maxResults:10];
+            NSLog([data description]);
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
             self.data = data;
             [self.tableView reloadData];
             self.navigationItem.rightBarButtonItem = sender;
@@ -62,13 +76,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Flickr Photo";
+    if ([self.navigationItem.title isEqualToString:@"PhotosByPlace"]) {
+        CellIdentifier =@"Flickr Photo new";
+    }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        NSLog(@"creating with subtitle");
     }
     
-    // Configure the cell...
     
     if ([self.navigationItem.title isEqualToString:@"Top Places"]) {
         NSDictionary* placeData = [self.data objectAtIndex:indexPath.row];
@@ -76,14 +93,40 @@
         cell.textLabel.text = [placeArray objectAtIndex:0];
         cell.detailTextLabel.text = [placeArray componentsJoinedByString:@","];
     }
-    else
-    {
+    else if([self.navigationItem.title isEqualToString:@"Top Photos"]) {
+        //get data from NSUserDefaults
+    }
+    else if ([self.navigationItem.title isEqualToString:@"PhotosByPlace"]) {
         NSDictionary * photo = [self.data objectAtIndex:indexPath.row];
-        cell.textLabel.text = [photo objectForKey:FLICKR_PHOTO_TITLE];
-        cell.detailTextLabel.text = [photo objectForKey:FLICKR_PHOTO_OWNER];
+        NSString * title = [photo objectForKey:FLICKR_PHOTO_TITLE];
+        NSString * subtitle = [photo valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
+        if (title) {
+            cell.textLabel.text = title;
+            cell.detailTextLabel.text = subtitle;
+        }
+        else if(subtitle){
+            cell.textLabel.text =subtitle;
+            cell.detailTextLabel.text = @"tsting";
+        }
+        else{
+            cell.textLabel.text = @"<Unknown>";
+            cell.detailTextLabel.text = @"<Unkown>";
+        }
+        NSLog(CellIdentifier);
     }
     return cell;
 }
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"PlaceToPhotoSegue"])
+    {
+        FlickerFetcherTableViewController * dVC = (FlickerFetcherTableViewController*)segue.destinationViewController;
+        dVC.dict = [[self.data objectAtIndex:self.selectedIndex] copy];
+    }
+}
+
 
 /*
  // Override to support conditional editing of the table view.
@@ -124,17 +167,9 @@
  }
  */
 
-#pragma mark - Table view delegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    self.selectedIndex = indexPath.row;
 }
 
 @end
