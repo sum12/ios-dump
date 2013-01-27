@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF57889C16B529EC00FA7B59 /* FlickerFetcherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF57889816B529EC00FA7B59 /* FlickerFetcherTableViewController.m */; };
+		EF57889D16B529EC00FA7B59 /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EF57889B16B529EC00FA7B59 /* FlickrFetcher.m */; };
 		EFC7702116B5275C001178EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7702016B5275C001178EE /* UIKit.framework */; };
 		EFC7702316B5275C001178EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7702216B5275C001178EE /* Foundation.framework */; };
 		EFC7702516B5275C001178EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFC7702416B5275C001178EE /* CoreGraphics.framework */; };
@@ -15,24 +17,26 @@
 		EFC7703116B5275C001178EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7703016B5275C001178EE /* AppDelegate.m */; };
 		EFC7703416B5275C001178EE /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC7703216B5275C001178EE /* MainStoryboard_iPhone.storyboard */; };
 		EFC7703716B5275C001178EE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFC7703516B5275C001178EE /* MainStoryboard_iPad.storyboard */; };
-		EFC7703A16B5275C001178EE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC7703916B5275C001178EE /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF57889716B529EC00FA7B59 /* FlickerFetcherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickerFetcherTableViewController.h; sourceTree = "<group>"; };
+		EF57889816B529EC00FA7B59 /* FlickerFetcherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickerFetcherTableViewController.m; sourceTree = "<group>"; };
+		EF57889916B529EC00FA7B59 /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
+		EF57889A16B529EC00FA7B59 /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
+		EF57889B16B529EC00FA7B59 /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
 		EFC7701C16B5275C001178EE /* AShutterBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AShutterBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFC7702016B5275C001178EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EFC7702216B5275C001178EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EFC7702416B5275C001178EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EFC7702816B5275C001178EE /* AShutterBug-Info.plist */ = {isa = PBXFileReference; path = "AShutterBug-Info.plist"; sourceTree = "<group>"; };
+		EFC7702816B5275C001178EE /* AShutterBug-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AShutterBug-Info.plist"; sourceTree = "<group>"; };
 		EFC7702A16B5275C001178EE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EFC7702C16B5275C001178EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EFC7702E16B5275C001178EE /* AShutterBug-Prefix.pch */ = {isa = PBXFileReference; path = "AShutterBug-Prefix.pch"; sourceTree = "<group>"; };
-		EFC7702F16B5275C001178EE /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFC7702E16B5275C001178EE /* AShutterBug-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AShutterBug-Prefix.pch"; sourceTree = "<group>"; };
+		EFC7702F16B5275C001178EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFC7703016B5275C001178EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EFC7703316B5275C001178EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		EFC7703616B5275C001178EE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		EFC7703816B5275C001178EE /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		EFC7703916B5275C001178EE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +83,13 @@
 		EFC7702616B5275C001178EE /* AShutterBug */ = {
 			isa = PBXGroup;
 			children = (
-				EFC7702F16B5275C001178EE /* AppDelegate.h */,
-				EFC7703016B5275C001178EE /* AppDelegate.m */,
 				EFC7703216B5275C001178EE /* MainStoryboard_iPhone.storyboard */,
+				EF57889716B529EC00FA7B59 /* FlickerFetcherTableViewController.h */,
+				EF57889816B529EC00FA7B59 /* FlickerFetcherTableViewController.m */,
+				EF57889916B529EC00FA7B59 /* FlickrAPIKey.h */,
+				EF57889A16B529EC00FA7B59 /* FlickrFetcher.h */,
+				EF57889B16B529EC00FA7B59 /* FlickrFetcher.m */,
 				EFC7703516B5275C001178EE /* MainStoryboard_iPad.storyboard */,
-				EFC7703816B5275C001178EE /* ViewController.h */,
-				EFC7703916B5275C001178EE /* ViewController.m */,
 				EFC7702716B5275C001178EE /* Supporting Files */,
 			);
 			path = AShutterBug;
@@ -93,6 +98,8 @@
 		EFC7702716B5275C001178EE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFC7702F16B5275C001178EE /* AppDelegate.h */,
+				EFC7703016B5275C001178EE /* AppDelegate.m */,
 				EFC7702816B5275C001178EE /* AShutterBug-Info.plist */,
 				EFC7702916B5275C001178EE /* InfoPlist.strings */,
 				EFC7702C16B5275C001178EE /* main.m */,
@@ -166,7 +173,8 @@
 			files = (
 				EFC7702D16B5275C001178EE /* main.m in Sources */,
 				EFC7703116B5275C001178EE /* AppDelegate.m in Sources */,
-				EFC7703A16B5275C001178EE /* ViewController.m in Sources */,
+				EF57889C16B529EC00FA7B59 /* FlickerFetcherTableViewController.m in Sources */,
+				EF57889D16B529EC00FA7B59 /* FlickrFetcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +296,7 @@
 				EFC7703F16B5275C001178EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
